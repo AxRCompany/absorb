@@ -5,7 +5,11 @@
             {% for link in section.settings.menu.links %}
             <a href="{{ link.url }}" class="navbar_link w-nav-link">{{ link.title }}</a>
             {% endfor %}
-            <div class="navbar1_menu-buttons">{% if section.settings.button_enabled == true %} <a href="#" class="button is-button-small w-button">{{ section.settings.button_text }}</a>{% endif %}</div>
+            {% if section.settings.button_enabled == true %}
+                <div class="navbar1_menu-buttons">
+                    <a href="#" class="button is-button-small w-button">{{ section.settings.button_text }}</a>
+                </div>
+            {% endif %}
         </nav>
         <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
             <div class="menu-icon">
