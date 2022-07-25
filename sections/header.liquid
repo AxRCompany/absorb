@@ -1,11 +1,11 @@
 <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="3fe29843-336e-105b-b56d-bf57d7cd196c" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar_container">
-        <a href="#" class="navbar_logo-link w-nav-brand"><img src="{{ section.settings.logo }}" alt="" class="navbar_logo" /></a>
+        <a href="#" class="navbar_logo-link w-nav-brand"><img src="{{ section.settings.logo_url }}" alt="" class="navbar_logo" /></a>
         <nav role="navigation" class="navbar_menu w-nav-menu">
             {% for link in section.settings.menu.links %}
             <a href="{{ link.url }}" class="navbar_link w-nav-link">{{ link.title }}</a>
             {% endfor %}
-            <div class="navbar1_menu-buttons"><a href="#" class="button is-button-small w-button">Button</a></div>
+            <div class="navbar1_menu-buttons"><a href="#" class="button is-button-small w-button">{{ section.settings.button_text }}</a></div>
         </nav>
         <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
             <div class="menu-icon">
@@ -23,7 +23,7 @@
     "settings": [
     {
         "type": "text",
-        "id": "logo",
+        "id": "logo_url",
         "default": "https://uploads-ssl.webflow.com/62de57ffe8549c49b6edda78/62de57ffe8549c0f6beddaa3_company-logo.svg",
         "label": "Lien du logo",
         "info": "Format SVG de préférence"
@@ -33,6 +33,12 @@
         "id": "menu",
         "default": "main-menu",
         "label": "Menu de navigation"
+    },
+    {
+        "type": "text",
+        "id": "button_text",
+        "default": "Order Now",
+        "label": "Texte du bouton"
     }]
 }
 {% endschema %}
