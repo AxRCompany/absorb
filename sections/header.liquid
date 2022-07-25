@@ -3,10 +3,8 @@
         <a href="#" class="navbar_logo-link w-nav-brand"><img src="https://uploads-ssl.webflow.com/62de57ffe8549c49b6edda78/62de57ffe8549c0f6beddaa3_company-logo.svg" alt="" class="navbar_logo" /></a>
         <nav role="navigation" class="navbar_menu w-nav-menu">
             {% for link in section.settings.menu.links %}
-
-
+            <a href="{{ link.url }}" class="navbar_link w-nav-link">{{ link.title }}</a>
             {% endfor %}
-            <a href="#" class="navbar_link w-nav-link">Link One</a><a href="#" class="navbar_link w-nav-link">Link Two</a><a href="#" class="navbar_link w-nav-link">Link Three</a>
             <div class="navbar1_menu-buttons"><a href="#" class="button is-button-small w-button">Button</a></div>
         </nav>
         <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
