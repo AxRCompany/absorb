@@ -1,6 +1,6 @@
 <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="3fe29843-336e-105b-b56d-bf57d7cd196c" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar_container">
-        <a href="#" class="navbar_logo-link w-nav-brand"><img src="{{ section.settings.logo_url }}" alt="" class="navbar_logo" /></a>
+        <a href="{{ shop.url }}" class="navbar_logo-link w-nav-brand"><img src="{{ section.settings.logo_url }}" alt="" class="navbar_logo" /></a>
         <nav role="navigation" class="navbar_menu w-nav-menu">
             {% for link in section.settings.menu.links %}
             <a href="{{ link.url }}" class="navbar_link w-nav-link">{{ link.title }}</a>
